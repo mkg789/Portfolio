@@ -1,0 +1,300 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+/* VARIABLES */
+:root {
+  --primary-color: #70ace6;
+  --secondary-color:#44586e;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.54;
+  text-align: center;
+}
+img {
+    width: 100%;
+    height: auto;
+  }
+.container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
+  #navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100vw;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  #navbar ul a {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  #navbar ul a:hover {
+    background-color: rgb(253, 6, 47);
+  }
+  
+ #about{
+    height: 90vh;
+    width: 100%;
+ }
+ h1{
+    padding-top:20%;
+    color: #dd1919;
+    font-size: 3.0rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+ }
+ #projects {
+    text-align: center;
+    width: 100%;
+    padding: 7rem .1rem;
+    background-color: var(--secondary-color);
+  }
+  
+  #projects .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+  }
+  #hp{
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+    line-height: 1.2;
+  }
+  #projects .projects .box {
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 3px;
+  }
+  
+  #projects .projects .box a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #projects .projects .box a p {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+  }
+#certification{
+    text-align: center;
+    width: 100%;
+    padding: 7rem .1rem;
+    background-color: rgb(161, 161, 226);
+}
+#certification .topcert{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+}
+#certification img{
+    height: 350px;
+    width: 350px;;
+}
+
+#certification .topcert .bx  {
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 3px;
+}
+#certification .topcert .bx a{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+#certification .topcert .bx a p{
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+#certification .downcert{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+}
+#certification .downcert .bx  {
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 3px;
+    
+}
+#certification .downcert .bx a{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+#certification .downcert .bx a p{
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+}
+#resume{
+    height:80%;
+    text-align: center;
+    width: 100%;
+    padding: 7rem .1rem;
+    background-color: rgb(224, 213, 208);
+}
+#resume #cv{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  margin-top: 2rem;
+  text-align: justify;
+}
+.left{
+    float: right;
+}
+.highlight{
+    font-weight:bold;
+}
+.profile_pic{
+    max-width: 450px;
+    max-height: 500px;
+}
+#contact {
+    height: 80vh;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  #contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #contact .container h1 {
+    font-size: 3.4rem;
+    font-weight: bolder;
+    padding-bottom: .1rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  #contact .container p {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  #contact .container .social>div a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #eee;
+    margin: 1rem 2rem;
+    font-weight: bolder;
+    transition: transform .5s;
+  }
+  
+  #contact .container .social>div a:hover {
+    transform: translateY(-5px);
+  }
+  #main-footer {
+    border-top: solid 4px var(--primary-color);
+    padding: 1rem;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  #main-footer .container {
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #main-footer .container p {
+    font-size: 1.2rem;
+  }
+  
+  #main-footer #creator a {
+    text-decoration: underline;
+    color: #eee;
+  
+    line-height: 1.5;
+  }
+h2{
+    font-size: 2.6rem;
+}  
+@media (max-width: 600px) {
+    #navbar {
+      padding: 0rem 1rem;
+      justify-content: center;
+    }
+  
+    #projects .projects {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #certification .downcert{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #certification .topcert{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #resume #cv{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #contact .container p {
+      margin-bottom: 1.5rem;
+    }
+  
+    #contact .container .social>div a {
+      display: block;
+      margin: 1rem 1.5rem;
+    }
+  
+    #main-footer .container {
+      flex-direction: column;
+    }
+  
+    #main-footer #creator {
+      margin-top: 1rem;
+    }
+  }
