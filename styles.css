@@ -267,12 +267,17 @@ h2{
     body{
       width:100%;
     }
+    h1{
+      padding-top: 50%;
+      font-size: 2rem;
+    }
     #navbar {
       padding: 0rem 0.5rem;
       justify-content: center;
     }
     #navbar ul a {
       font-size: 16px;
+      padding:3px 5px;
     }
     #projects .projects {
       grid-template-columns: repeat(1, 1fr);
@@ -291,7 +296,6 @@ h2{
     }
   
     #contact .container .social>div a {
-      display: block;
       margin: 1rem 1.5rem;
     }
   
