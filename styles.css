@@ -61,14 +61,18 @@ img {
  #about{
     height: 90vh;
     width: 100%;
+    background-color: #333;
  }
  h1{
     padding-top:20%;
-    color: #dd1919;
+    color: whitesmoke;
     font-size: 3.0rem;
     font-weight: bolder;
     line-height: 1.2;
     margin-bottom: 1rem;
+ }
+ .sd{
+    color: white;
  }
  #projects {
     text-align: center;
@@ -277,8 +281,11 @@ h2{
       width:100%;
     }
     h1{
-      padding-top: 50vh;
-      font-size: 1.8rem;
+      padding-top: 10vh;
+      font-size: 2rem;
+    }
+    .mkg{
+      display:block
     }
     #navbar {
       padding: 0rem 0.5rem;
@@ -287,6 +294,9 @@ h2{
     #navbar ul a {
       font-size: 16px;
       padding:3px 5px;
+    }
+    .big{
+      font-size: 2.5rem;
     }
     #projects .projects {
       grid-template-columns: repeat(1, 1fr);
