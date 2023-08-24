@@ -4,7 +4,7 @@
 
 /* VARIABLES */
 :root {
-  --primary-color: #70ace6;
+  --primary-color: rgb(180, 5, 5);
   --secondary-color:#44586e;
 }
 
@@ -275,17 +275,24 @@ img {
   }
 h2{
     font-size: 2.6rem;
+}
+#h12{
+  color: red;
 }  
 @media (max-width: 600px) {
     body{
       width:100%;
     }
+    #about{
+      height: 50vh;
+    }
     h1{
-      padding-top: 10vh;
-      font-size: 2rem;
+      padding-top: 15vh;
+      font-size: 2.5rem;
     }
     .mkg{
-      display:block
+      display:block;
+      
     }
     #navbar {
       padding: 0rem 0.5rem;
@@ -296,7 +303,8 @@ h2{
       padding:3px 5px;
     }
     .big{
-      font-size: 2.5rem;
+      font-size: 3.5rem;
+      text-align: left;
     }
     #projects .projects {
       grid-template-columns: repeat(1, 1fr);
