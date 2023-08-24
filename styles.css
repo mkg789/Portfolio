@@ -290,8 +290,9 @@ h2{
       padding-top: 15vh;
       font-size: 2.5rem;
     }
-    .mkg{
+    .mkg, .sd{
       display:block;
+      text-align: left;
       
     }
     #navbar {
@@ -302,9 +303,9 @@ h2{
       font-size: 16px;
       padding:3px 5px;
     }
-    .big{
+    .big, .mkg789{
       font-size: 3.5rem;
-      text-align: left;
+      
     }
     #projects .projects {
       grid-template-columns: repeat(1, 1fr);
