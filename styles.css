@@ -281,10 +281,13 @@ h2{
 } 
 #button{
   margin: 0 auto;
-  font-size: 2rem;
-  background-color: #333;
   color: #eee;
 } 
+button{
+  font-size: 2rem;
+  background-color:#68a5e6;
+  border-radius: 10px;
+}
 @media (max-width: 600px) {
     body{
       width:100%;
