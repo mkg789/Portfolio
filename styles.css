@@ -278,7 +278,13 @@ h2{
 }
 #h12{
   color: red;
-}  
+} 
+#button{
+  margin: 0 auto;
+  font-size: 2rem;
+  background-color: #333;
+  color: #eee;
+} 
 @media (max-width: 600px) {
     body{
       width:100%;
