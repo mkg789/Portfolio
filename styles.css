@@ -282,6 +282,7 @@ h2{
 #button{
   margin: 0 auto;
   color: #eee;
+  padding-top: 15px;
 } 
 button{
   font-size: 2rem;
