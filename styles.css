@@ -4,7 +4,7 @@
 
 /* VARIABLES */
 :root {
-  --primary-color: rgb(180, 5, 5);
+  --primary-color: rgb(197, 43, 43);
   --secondary-color:#44586e;
 }
 
@@ -61,7 +61,7 @@ img {
  #about{
     height: 90vh;
     width: 100%;
-    background-color: #333;
+    background-image:url("https://www.technocrazed.com/wp-content/uploads/2015/12/black-wallpaper-to-set-as-background-1.jpg")
  }
  h1{
     padding-top:20%;
@@ -78,7 +78,7 @@ img {
     text-align: center;
     width: 100%;
     padding: 7rem .1rem;
-    background-color: var(--secondary-color);
+    background-image: url("https://www.technocrazed.com/wp-content/uploads/2015/12/black-wallpaper-to-set-as-background-28.jpg");
   }
   
   #projects .projects {
@@ -119,10 +119,11 @@ img {
     transform: translateY(-5px);
   }
 #certification{
+    color:#fff;
     text-align: center;
     width: 100%;
     padding: 7rem .1rem;
-    background-color: rgb(161, 161, 226);
+    background-image: url("https://wallpapercave.com/wp/p2YDWOS.jpg");
 }
 #certification .topcert{
     display: grid;
@@ -185,11 +186,12 @@ img {
   transform: translateY(-5px);
 }
 #resume{
+  color: #eee;
     height:80%;
     text-align: center;
     width: 100%;
     padding: 7rem .1rem;
-    background-color: rgb(224, 213, 208);
+    background-image:linear-gradient(rgb(30, 6, 83),rgb(55, 215, 255),rgb(30, 6, 83));
 }
 #resume #cv{
   display: grid;
@@ -211,7 +213,7 @@ img {
 }
 #contact {
     height: 80vh;
-    background-color: #444;
+    background-color: #000000;
     color: #fff;
   }
   
@@ -253,7 +255,7 @@ img {
   #main-footer {
     border-top: solid 4px var(--primary-color);
     padding: 1rem;
-    background-color: #444;
+    background-color: #000000;
     color: #fff;
   }
   
