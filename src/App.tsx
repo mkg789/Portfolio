@@ -20,6 +20,8 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 import Experience from './components/Experience'
 
+import ExperienceCaseStudies from './components/ExperienceCaseStudies'
+
 import Skills from './components/Skills'
 
 import Projects from './components/Projects'
@@ -27,6 +29,7 @@ import Projects from './components/Projects'
 const navigation = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Case Studies', href: '#engineering-case-studies' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
@@ -156,7 +159,7 @@ function App() {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1KhYwiAUX4g0NK12eD4g3evjz9EH2oQ0j/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1teeUBVKvCprJ4eyEDQ6ysFdbXMxBrz52/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-lg border border-white/10 px-6 py-3.5 text-sm font-semibold text-slate-300 transition hover:border-blue-400/50 hover:text-white"
@@ -300,6 +303,7 @@ function App() {
 
       {/* Experience */}
       <Experience />
+      <ExperienceCaseStudies />
       <Skills />
       <Projects />
 
