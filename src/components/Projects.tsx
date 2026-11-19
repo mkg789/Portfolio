@@ -133,13 +133,13 @@ function ArchitectureNode({
 
 function Architecture() {
   return (
-    <div className="rounded-2xl border border-white/[0.08] bg-[#0b1220] p-5 md:p-7">
+    <div className="rounded-2xl border border-white/[0.08] bg-[#0b1220] p-4 sm:p-5 md:p-7">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
             System Architecture
           </p>
-          <h4 className="mt-2 text-lg font-bold text-white">
+          <h4 className="mt-2 break-words text-lg font-bold text-white">
             CI/CD & GitOps Workflow
           </h4>
         </div>
@@ -256,7 +256,7 @@ function Architecture() {
                   <p className="mt-1 text-sm font-bold text-emerald-400">
                     1 replica
                   </p>
-                  <p className="mt-1 text-[10px] leading-4 text-slate-500">
+                  <p className="mt-1 text-xs leading-5 text-slate-500 lg:text-[10px] lg:leading-4">
                     Connects to MongoDB Atlas
                   </p>
                 </div>
@@ -266,7 +266,7 @@ function Architecture() {
             <div className="flex flex-col items-center justify-center gap-1 py-2 lg:py-0">
               <ArrowDown size={17} className="text-emerald-400/70 lg:hidden" />
               <ArrowRight size={17} className="hidden text-emerald-400/70 lg:block" />
-              <span className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 sm:text-[9px]">
                 Backend connection
               </span>
             </div>
@@ -278,7 +278,7 @@ function Architecture() {
                   <p className="text-xs font-semibold text-slate-200">
                     MongoDB Atlas
                   </p>
-                  <p className="mt-1 text-[10px] leading-4 text-slate-500">
+                  <p className="mt-1 text-xs leading-5 text-slate-500 lg:text-[10px] lg:leading-4">
                     External database used by the backend
                   </p>
                 </div>
@@ -286,7 +286,7 @@ function Architecture() {
             </div>
           </div>
 
-          <p className="mt-4 text-[10px] leading-5 text-slate-500">
+          <p className="mt-4 text-xs leading-5 text-slate-500 lg:text-[10px]">
             Helm configuration references image versions available through the separate GHCR → Harbor distribution flow; Argo CD synchronizes the GitOps desired state into Minikube.
           </p>
         </div>
@@ -305,7 +305,7 @@ function FeaturedProject() {
       className="overflow-hidden rounded-2xl border border-blue-400/20 bg-[#101727]"
     >
       {/* Project information */}
-      <div className="p-7 md:p-9">
+      <div className="p-5 sm:p-7 md:p-9">
         <div className="flex flex-wrap items-center gap-3">
           <span className="rounded-full border border-emerald-400/20 bg-emerald-400/[0.07] px-3 py-1.5 text-[10px] font-semibold tracking-wider text-emerald-300">
             FLAGSHIP PROJECT
@@ -329,7 +329,7 @@ function FeaturedProject() {
             <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-400">
               Project overview
             </p>
-            <p className="mt-2 text-xs leading-6 text-slate-400">
+            <p className="mt-2 text-sm leading-6 text-slate-400 lg:text-xs">
               A working end-to-end workflow deploys ElectronicsWeb through two distinct paths:
               image distribution and GitOps-based deployment.
             </p>
@@ -338,7 +338,7 @@ function FeaturedProject() {
             <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
               Image distribution
             </p>
-            <p className="mt-2 text-xs leading-5 text-slate-300">
+            <p className="mt-2 text-sm leading-6 text-slate-300 lg:text-xs lg:leading-5">
               GitHub Actions builds frontend and backend Docker images, pushes them to GHCR, and Harbor receives them from GHCR.
             </p>
           </div>
@@ -346,7 +346,7 @@ function FeaturedProject() {
             <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
               GitOps deployment
             </p>
-            <p className="mt-2 text-xs leading-5 text-slate-300">
+            <p className="mt-2 text-sm leading-6 text-slate-300 lg:text-xs lg:leading-5">
               A WSL 2 self-hosted runner updates Helm/GitOps configuration and image versions; Argo CD syncs the desired state to Minikube.
             </p>
           </div>
@@ -369,12 +369,12 @@ function FeaturedProject() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <a
             href={featuredProject.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-600"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-600 sm:justify-start"
           >
             <FaGithub size={17} />
             View Repository
@@ -385,7 +385,7 @@ function FeaturedProject() {
             href={featuredProject.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-blue-400/40 hover:text-white"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-blue-400/40 hover:text-white sm:justify-start"
           >
             Live Application
             <ExternalLink size={15} />
@@ -405,7 +405,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="border-t border-white/[0.07] bg-[#0a0e19] px-6 py-24 lg:px-10"
+      className="border-t border-white/[0.07] bg-[#0a0e19] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
 
@@ -453,7 +453,7 @@ export default function Projects() {
               href="https://github.com/mkg789"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300"
+              className="inline-flex min-h-11 items-center gap-2 px-2 text-sm font-medium text-blue-400 hover:text-blue-300"
             >
               Explore GitHub
               <ArrowUpRight size={16} />
@@ -485,7 +485,7 @@ export default function Projects() {
                     {project.title}
                   </h4>
 
-                  <p className="mt-3 flex-1 text-xs leading-6 text-slate-400">
+                  <p className="mt-3 flex-1 text-sm leading-6 text-slate-400 lg:text-xs">
                     {project.description}
                   </p>
 
@@ -493,7 +493,7 @@ export default function Projects() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-md bg-white/[0.04] px-2 py-1.5 text-[10px] text-slate-400"
+                        className="rounded-md bg-white/[0.04] px-2 py-1.5 text-xs text-slate-400 lg:text-[10px]"
                       >
                         {tech}
                       </span>
@@ -505,7 +505,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xs font-semibold text-slate-300 transition hover:text-blue-400"
+                      className="flex min-h-11 items-center gap-2 px-2 text-xs font-semibold text-slate-300 transition hover:text-blue-400"
                     >
                       <FaGithub size={15} />
                       View project
@@ -517,7 +517,7 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Open ${project.title} live application`}
-                        className="text-slate-400 hover:text-blue-400"
+                        className="flex h-11 w-11 items-center justify-center rounded-lg text-slate-400 transition hover:bg-white/[0.04] hover:text-blue-400 lg:hover:bg-transparent"
                       >
                         <ExternalLink size={15} />
                       </a>

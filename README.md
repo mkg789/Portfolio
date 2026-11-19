@@ -125,9 +125,9 @@ Practicing Linux administration, command-line utilities, process management and 
 
 - **Portfolio:** [Add your portfolio URL here]
 - **GitHub:** [github.com/mkg789](https://github.com/mkg789)
-- **LinkedIn:** [Add your LinkedIn URL here]
+- **LinkedIn:** [Murali_Profile](https://www.linkedin.com/in/murali-krishna-g-195832256/)
 - **YouTube:** [Murali Krishna](https://youtube.com/@muralikrishnag18)
-
+- **Instagram:** 
 ---
 
 *Building, learning and engineering one project at a time.*
