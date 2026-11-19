@@ -158,7 +158,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative border-t border-white/[0.07] bg-[#080b14] px-6 py-24 lg:px-10"
+      className="relative border-t border-white/[0.07] bg-[#080b14] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
 
@@ -201,7 +201,7 @@ export default function Skills() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`rounded-lg border px-4 py-2.5 text-sm transition ${
+              className={`min-h-11 rounded-lg border px-4 py-3 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400 ${
                 activeCategory === category
                   ? 'border-blue-400 bg-blue-500 text-white'
                   : 'border-white/10 bg-white/[0.03] text-slate-400 hover:border-blue-400/40 hover:text-white'
@@ -227,20 +227,20 @@ export default function Skills() {
               className="group rounded-xl border border-white/[0.08] bg-[#101727] p-5 transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-[#131e32]"
             >
               <div className="flex items-start justify-between gap-2">
-                <h3 className="font-semibold text-slate-100">
+                <h3 className="min-w-0 break-words font-semibold text-slate-100">
                   {skill.name}
                 </h3>
 
                 <span className="h-2 w-2 shrink-0 rounded-full bg-blue-400 opacity-60 transition group-hover:opacity-100" />
               </div>
 
-              <p className="mt-3 min-h-10 text-xs leading-6 text-slate-500">
+              <p className="mt-3 min-h-10 text-sm leading-6 text-slate-500 lg:text-xs">
                 {skill.description}
               </p>
 
               <div className="mt-5 border-t border-white/[0.07] pt-4">
                 <span
-                  className={`inline-block rounded-md border px-2.5 py-1.5 text-[10px] leading-4 ${statusStyles[skill.status]}`}
+                  className={`inline-block rounded-md border px-2.5 py-1.5 text-xs leading-4 lg:text-[10px] ${statusStyles[skill.status]}`}
                 >
                   {skill.status}
                 </span>

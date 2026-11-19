@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="border-t border-white/[0.07] bg-[#0a0e19] px-6 py-24 lg:px-10"
+      className="border-t border-white/[0.07] bg-[#0a0e19] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -34,9 +34,9 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-12 rounded-2xl border border-white/10 bg-[#101727] p-6 md:p-8"
+          className="mt-10 rounded-2xl border border-white/10 bg-[#101727] p-5 sm:mt-12 sm:p-6 md:p-8"
         >
-          <div className="flex flex-wrap items-center justify-between gap-5">
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-blue-400">
                 Professional Experience
@@ -49,7 +49,7 @@ export default function Experience() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] px-4 py-3">
+            <div className="w-full rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] px-4 py-3 sm:w-auto">
               <p className="text-xs font-semibold text-emerald-300">
                 Associate Software Engineer → Analyst
               </p>

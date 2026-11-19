@@ -216,7 +216,7 @@ function WorkflowDiagram({ steps }: { steps: string[] }) {
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-400/10 text-[10px] font-bold text-blue-300">
                 {index + 1}
               </span>
-              <span className="text-xs leading-5 text-slate-300">{step}</span>
+              <span className="text-sm leading-5 text-slate-300 lg:text-xs">{step}</span>
             </div>
             {index < steps.length - 1 && (
               <div className="flex justify-center">
@@ -259,8 +259,8 @@ function CaseStudyCard({
           : 'border-white/[0.09]'
       }`}
     >
-      <summary className="list-none cursor-pointer p-5 outline-none transition hover:bg-white/[0.02] focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-400 sm:p-6 md:p-7 [&::-webkit-details-marker]:hidden">
-        <div className="flex items-start gap-4">
+      <summary className="list-none cursor-pointer p-4 outline-none transition hover:bg-white/[0.02] focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-400 sm:p-6 md:p-7 [&::-webkit-details-marker]:hidden">
+        <div className="flex items-start gap-3 sm:gap-4">
           <span
             className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border text-sm font-bold ${
               study.featured
@@ -272,34 +272,36 @@ function CaseStudyCard({
           </span>
 
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <p className="text-[10px] font-semibold tracking-[0.16em] text-blue-400">
-                {study.category}
-              </p>
-              {study.featured && (
-                <span className="rounded-full border border-blue-400/20 bg-blue-400/[0.07] px-2 py-1 text-[9px] font-semibold tracking-wider text-blue-300">
-                  FEATURED
-                </span>
-              )}
+            <div className="flex items-start justify-between gap-2">
+              <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+                <p className="text-[10px] font-semibold tracking-[0.12em] text-blue-400 sm:tracking-[0.16em]">
+                  {study.category}
+                </p>
+                {study.featured && (
+                  <span className="rounded-full border border-blue-400/20 bg-blue-400/[0.07] px-2 py-1 text-[9px] font-semibold tracking-wider text-blue-300">
+                    FEATURED
+                  </span>
+                )}
+              </div>
+              <ChevronDown
+                size={18}
+                aria-hidden="true"
+                className="mt-1 shrink-0 text-slate-500 transition-transform group-open:rotate-180"
+              />
             </div>
             <h3 className="mt-2 text-base font-bold leading-snug text-white sm:text-lg md:text-xl">
               {study.title}
             </h3>
-            <p className="mt-3 text-xs leading-6 text-slate-400 sm:text-sm">
+            <p className="mt-3 text-sm leading-6 text-slate-400">
               {study.summary}
             </p>
           </div>
 
-          <ChevronDown
-            size={18}
-            aria-hidden="true"
-            className="mt-1 shrink-0 text-slate-500 transition-transform group-open:rotate-180"
-          />
         </div>
         <span className="sr-only">Expand case study details</span>
       </summary>
 
-      <div className="border-t border-white/[0.07] p-5 sm:p-6 md:p-7">
+      <div className="border-t border-white/[0.07] p-4 sm:p-6 md:p-7">
         <div className="grid gap-6 md:grid-cols-2">
           <DetailBlock
             icon={FileCog}
@@ -320,7 +322,7 @@ function CaseStudyCard({
               {study.responsibilities.map((responsibility) => (
                 <li
                   key={responsibility}
-                  className="flex gap-3 text-xs leading-6 text-slate-400"
+                  className="flex gap-3 text-sm leading-6 text-slate-400 lg:text-xs"
                 >
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
                   {responsibility}
@@ -358,7 +360,7 @@ function CaseStudyCard({
             {study.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-md border border-white/10 bg-white/[0.035] px-2.5 py-1.5 text-[10px] text-slate-300 sm:text-xs"
+                className="rounded-md border border-white/10 bg-white/[0.035] px-2.5 py-2 text-xs text-slate-300 lg:py-1.5 lg:text-[10px]"
               >
                 {technology}
               </span>
@@ -385,7 +387,7 @@ function DetailBlock({
         <Icon size={15} className="text-blue-400" />
         {title}
       </h4>
-      <p className="mt-3 text-xs leading-6 text-slate-400">{content}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-400 lg:text-xs">{content}</p>
     </div>
   )
 }
@@ -395,7 +397,7 @@ export default function ExperienceCaseStudies() {
     <section
       id="engineering-case-studies"
       aria-labelledby="case-studies-heading"
-      className="relative border-t border-white/[0.07] bg-[#080b14] px-6 py-20 lg:px-10 lg:py-24"
+      className="relative border-t border-white/[0.07] bg-[#080b14] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -421,7 +423,7 @@ export default function ExperienceCaseStudies() {
           </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2 lg:gap-5">
+        <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-2 lg:gap-5">
           {caseStudies.map((study, index) => (
             <CaseStudyCard key={study.number} study={study} index={index} />
           ))}
